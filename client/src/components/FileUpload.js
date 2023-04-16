@@ -11,14 +11,6 @@ const FileUpload = ({ contract, account, provider }) => {
         const formData = new FormData(); //getting data from form
         formData.append("file", file);
         console.log(formData);
-        // const metadata = JSON.stringify({
-        //   name: "File name",
-        // });
-        // formData.append("pinataMetadata", metadata);
-        // const options = JSON.stringify({
-        //   cidVersion: 0,
-        // });
-        // formData.append("pinataOptions", options);
         const resFile = await axios({
           method: "post",
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
