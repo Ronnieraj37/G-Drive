@@ -26,7 +26,7 @@ function App() {
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setaccount(address);
-        let contractAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
+        let contractAddress = "0xb62D0cDd1ac95b4C443674c5DE4CcB60838CF0C6";
         const contractInstance = new ethers.Contract(
           contractAddress,
           Upload.abi,
@@ -62,9 +62,6 @@ function App() {
 
       <div className="App">
         <h1 style={{ color: "white" }}>Dribe 3.0</h1>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
         <p style={{ color: "white" }}> account : {account}</p>
         <FileUpload
           account={account}
